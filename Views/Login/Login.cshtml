@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Registation.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+            <form method="post" action="@Url.Action("Login", "Login")">
+                <h2>Login</h2>
+                @* This is a field as label and text to enter the username and password *@
+                <div class="input-group">
+                    <input type="text"  name="Username" required>
+                    <label for="">Username </label>
+                </div>
+                <div class="input-group">
+                    <input type="password"  name="Password" required>
+                    <label for="">Password</label>
+                </div>
+                @* This is a chick list and login button *@
+                <div class="remember">
+                    <label><input type="checkbox"> Remember me</label>
+                </div>
+                <button type="submit">Login</button>
+                @* This is a sign up button *@
+                <div class="signUp-link">
+                    <p>Don't have an account? <a href="@Url.Action("Register","Login")" class="signUpBtn-link">Sign Up</a></p>
+                </div>
+                @* This is a icon as fb google and twitter *@
+                <div class="auth-icons">
+                    <a href="#" class="auth-icon facebook">
+                        <img src="~/Asserts/Facebook.jpg" alt="Facebook" />
+                    </a>
+                    <a href="#" class="auth-icon google">
+                        <img src="~/Asserts/Google.jpg" alt="Google" />
+                    </a>
+                    <a href="#" class="auth-icon twitter">
+                        <img src="~/Asserts/Twitter.jpg" alt="Twitter" />
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
